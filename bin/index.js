@@ -13,7 +13,6 @@ const program = require('commander')
         componentName = name;
     })
     .option('-h, --hooks', 'Create Function with hooks')
-    // .option('-c, --css', `Add ${componentName}.css`)
     // eslint-disable-next-line no-undef
     .parse(process.argv)
 
@@ -22,8 +21,6 @@ createComponent(componentName);
 function createComponent(name) {
     const root = path.resolve(name);
     const options = program._optionValues
-
-    console.log({options})
 
     if (!fs.existsSync(root)) {
         fs.mkdirSync(root);
