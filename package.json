@@ -1,0 +1,21 @@
+{
+  "name": "create-react-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "create-react-component": "bin/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.28.0"
+  },
+  "dependencies": {
+    "commander": "^7.2.0",
+    "fs-extra": "^10.0.0"
+  }
+}
