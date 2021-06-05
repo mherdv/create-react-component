@@ -35,9 +35,12 @@ function createComponent(name) {
         path.join(root, `${componentName}.jsx`),
         getFunctionalComponent(componentName,options.hooks)
     )
-    fs.writeFileSync(
-        path.join(root, `use${componentName}.js`),
-        getFunctionalComponentCustomHook(`use${componentName}`)
-    )
+    if(options.hooks){
+        fs.writeFileSync(
+            path.join(root, `use${componentName}.js`),
+            getFunctionalComponentCustomHook(`use${componentName}`)
+        )
+    }
+
 
 }
