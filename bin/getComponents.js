@@ -14,7 +14,7 @@ module.exports.getComponentName = (name)=>{
 module.exports.getFunctionalComponent = (newName,hooks)=> {
 
     const component = `import React from 'react';
-import { use${newName} } from './use${newName}'
+${hooks?"import { use${newName} } from './use${newName}":''}
     
 const ${newName} = ()=>{
     ${hooks? `const hooks = use${newName}()`:''}
